@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuchis - Carrito</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap');
+
+        body {
+            font-family: 'Glacial Indifference', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #4b0082;
+            overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        }
+
+        header {
+            background-color: #DCBDD0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ba55d3;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .header-center {
+            font-family: 'Bodoni Moda', serif;
+            font-style: italic;
+            font-size: 36px;
+            color: #4b0082;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #4b0082;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #915f95;
+        }
+
+    
+        .caution-tape {
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: -25%; /* Mueve la cinta ligeramente fuera de la pantalla */
+            width: 150%; /* Asegura que la cinta cubra toda la pantalla en diagonal */
+            transform: rotate(-20deg); /* Angulo de la cinta */
+            z-index: 1001;
+            animation: slide 3s infinite linear;
+        }
+
+        /* Animación de deslizamiento de la cinta */
+        @keyframes slide {
+            0% { transform: rotate(-20deg) translateX(0); }
+            50% { transform: rotate(-20deg) translateX(-10%); }
+            100% { transform: rotate(-20deg) translateX(0); }
+        }
+
+        /* Estilos para el cartel colgante */
+        .hanging-sign {
+            position: fixed;
+            top: 100px; /* Espacio debajo de la cinta */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ec90e5;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            text-align: center;
+            z-index: 1002;
+            animation: swing 3s infinite ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Animación de balanceo del cartel */
+        @keyframes swing {
+            0% { transform: translateX(-50%) rotate(0deg); }
+            25% { transform: translateX(-48%) rotate(2deg); }
+            50% { transform: translateX(-50%) rotate(0deg); }
+            75% { transform: translateX(-52%) rotate(-2deg); }
+            100% { transform: translateX(-50%) rotate(0deg); }
+        }
+
+        section {
+            margin-top: 200px; /* Espacio debajo de la cinta y el cartel */
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #DCBDD0;
+            color: #4b0082;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #ba55d3;
+            position: sticky;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="chuchis logo pet.png" alt="Logo de Chuchis">
+        </div>
+        <div class="header-center">
+            CHUCHIS
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="productos.html">PRODUCTOS</a></li>
+                <li><a href="carrito.html">CARRITO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cinta de precaución -->
+    <div class="caution-tape">
+        PRECAUCIÓN: EL CARRITO NO ESTÁ DISPONIBLE ACTUALMENTE
+    </div>
+
+    <!-- Cartel colgante -->
+    <div class="hanging-sign">
+        Lo sentimos, el carrito no está disponible en este momento.<br>
+        ¡Estará listo muy pronto!
+    </div>
+
+    <section>
+        <p>
+            Sigue explorando nuestros productos en la tienda mientras trabajamos en la funcionalidad del carrito.
+        </p>
+    </section>
+
+    <footer>
+        <p>CONTACTANOS</p>
+        <p>Tel: (57) 3212004938 | Cel: (57) 3135813204</p>
+        <p>Email: chuchisforever@hotmail.com</p>
+        <p>contactanos si tienes alguna duda o tu producto presenta algun problema, trataremos de responder lo mas rapido posible</p>
+        <p>Mariet Sofia Mercado Leon</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuchis - Compra</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap');
+
+        body {
+            font-family: 'Glacial Indifference', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Fondo blanco */
+            color: #4b0082; /* Texto en tono morado oscuro */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        header {
+            background-color: #DCBDD0; /* Fondo rosado claro */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ba55d3; /* Línea morada */
+            flex-wrap: wrap; /* Ajuste para pantallas pequeñas */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .header-center {
+            font-family: 'Bodoni Moda', serif;
+            font-style: italic;
+            font-size: 24px; /* Tamaño ajustado para pantallas más pequeñas */
+            color: #4b0082;
+            text-align: center;
+            flex: 1;
+        }
+
+        nav {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end; /* Alinear el menú de navegación a la derecha */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center; /* Alinear verticalmente los elementos del menú */
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #4b0082; /* Color de texto de los enlaces */
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #915f95; /* Cambio de color al pasar el mouse */
+        }
+
+        .cart-link {
+            display: flex;
+            align-items: center;
+            color: #4b0082; /* Color del enlace del carrito */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cart-link img {
+            margin-left: 8px;
+            height: 24px; /* Tamaño del icono del carrito */
+            width: auto;
+        }
+
+        section {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffffff; /* Fondo blanco */
+            text-align: center;
+        }
+
+        .product {
+            max-width: 600px; /* Limita el ancho máximo del producto */
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .product img {
+            width: 100%; /* Imagen ocupa todo el ancho disponible */
+            height: auto;
+            max-height: 400px; /* Ajusta la altura máxima */
+            object-fit: cover;
+        }
+
+        .product-details {
+            margin-top: 20px;
+            color: #4b0082; /* Color del texto */
+        }
+
+        .product-details h2 {
+            font-size: 28px;
+            margin: 10px 0;
+        }
+
+        .product-details p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product-details .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #b344b6;
+            margin: 10px 0;
+        }
+
+        .quantity-selector {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quantity-selector button {
+            padding: 10px;
+            border: none;
+            background-color: #b344b6;
+            color: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .quantity-selector button:hover {
+            background-color: #915f95;
+        }
+
+        .quantity-selector span {
+            font-size: 24px;
+            margin: 0 20px;
+            color: #4b0082;
+        }
+
+        .add-to-cart {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #b344b6;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: relative;
+        }
+
+        .add-to-cart:hover {
+            background-color: #915f95;
+        }
+
+        footer {
+            background-color: #DCBDD0; /* Fondo rosado claro */
+            color: #4b0082; /* Texto en morado oscuro */
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #ba55d3; /* Línea morada */
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .header-center {
+                font-size: 20px;
+            }
+
+            .product-details h2 {
+                font-size: 24px;
+            }
+
+            .product-details p {
+                font-size: 16px;
+            }
+
+            .quantity-selector span {
+                font-size: 20px;
+            }
+
+            .quantity-selector button {
+                font-size: 16px;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-center {
+                font-size: 18px;
+            }
+
+            .product-details h2 {
+                font-size: 20px;
+            }
+
+            .product-details p {
+                font-size: 14px;
+            }
+
+            .quantity-selector span {
+                font-size: 18px;
+            }
+
+            .quantity-selector button {
+                font-size: 14px;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="chuchis logo pet.png" alt="Logo de Chuchis">
+        </div>
+        <div class="header-center">
+            CHUCHIS
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="productos.html">PRODUCTOS</a></li>
+                <li>
+                    <a href="carrito.html" class="cart-link">
+                        CARRITO
+                        <img src="carrito2.png" alt="Carrito">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="product">
+            <img src="galaxy.jpg" alt="Producto Ejemplo">
+            <div class="product-details">
+                <h2>Slime Galáctico</h2>
+                <p class="price">$25,000</p>
+                <p>Un slime impresionante que brilla con los colores del universo. Ideal para jugar y relajarse.</p>
+                <div class="quantity-selector">
+                    <input type="number" id="quantity" name="quantity" min="0" max="100" value="1" style="text-align: center; width: 60px; font-size: 18px; padding: 10px; border: 1px solid #b344b6; border-radius: 5px;">
+                </div>
+                
+                <button class="add-to-cart">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>CONTACTANOS</p>
+        <p>Tel: (57) 3212004938 | Cel: (57) 3135813204</p>
+        <p>Email: chuchisforever@hotmail.com</p>
+        <p>contactanos si tienes alguna duda o tu producto presenta algun problema, trataremos de responder lo mas rapido posible</p>
+        <p>Mariet Sofia Mercado Leon</p>
+    </footer>
+</body>
+</html>

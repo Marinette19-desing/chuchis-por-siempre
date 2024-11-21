@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuchis - Productos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Glacial+Indifference&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap');
+
+        body {
+            font-family: 'Glacial Indifference', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #4b0082;
+        }
+
+        header {
+            background-color: #DCBDD0;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ba55d3;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .header-center {
+            font-family: 'Bodoni Moda', serif;
+            font-style: italic;
+            font-size: 24px;
+            color: #4b0082;
+            text-align: center;
+            flex: 1;
+        }
+
+        nav {
+            flex: 1;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #4b0082;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #915f95;
+        }
+
+        section {
+            padding: 20px;
+            background-color: #ffffff;
+        }
+
+        section h2 {
+            color: #b344b6;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .product-item {
+            width: calc(48%);
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-item img:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        footer {
+            background-color: #DCBDD0;
+            color: #4b0082;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #ba55d3;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .header-center {
+                font-size: 20px;
+            }
+
+            section h2 {
+                font-size: 20px;
+            }
+
+            .product-item {
+                width: calc(100% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-center {
+                font-size: 18px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            section h2 {
+                font-size: 18px;
+            }
+
+            .product-item {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="chuchis logo pet.png" alt="Logo de Chuchis">
+        </div>
+        <div class="header-center">
+            CHUCHIS
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="productos.html">PRODUCTOS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Productos</h2>
+        <div class="product">
+            <div class="product-item">
+                <a href="slime formas.html"><img src="image (1).png" alt="Producto 1"></a>
+                <p>slime con forma (personalizable)</p>
+            </div>
+            <div class="product-item">
+                <a href="slime nube.html"><img src="producto-2.jpg" alt="Producto 2"></a>
+                <p>slime de nube</p>
+            </div>
+            <div class="product-item">
+                <a href="galaxy.html"><img src="galaxy.jpg" alt="Producto 3"></a>
+                <p>slime galáctico</p>
+            </div>
+            <div class="product-item">
+                <a href="slime metalico.html"><img src="producto-6.jpg" alt="Producto 4"></a>
+                <p>slime metálico</p>
+            </div>
+            <div class="product-item">
+                <a href="slime transparente.html"><img src="transparente.jpg" alt="Producto 5"></a>
+                <p>slime transparente</p>
+            </div>
+            <div class="product-item">
+                <a href="slime normal.html"><img src="producto-3.jpg" alt="Producto 6"></a>
+                <p>slime normal (personalizable)</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>CONTACTANOS</p>
+        <p>Tel: (57) 3212004938 | Cel: (57) 3135813204</p>
+        <p>Email: chuchisforever@hotmail.com</p>
+        <p>contactanos si tienes alguna duda o tu producto presenta algun problema, trataremos de responder lo mas rapido posible</p>
+        <p>Mariet Sofia Mercado Leon</p>
+    </footer> 
+</body>
+</html>
